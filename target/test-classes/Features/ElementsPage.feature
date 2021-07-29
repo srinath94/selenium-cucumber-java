@@ -1,8 +1,5 @@
 Feature: Elements
 
-  Background:
-    Given I am on the elements page
-
   Scenario: Validate text box fields
     Given I click on TextBox option
     When I enter text in all the available fields

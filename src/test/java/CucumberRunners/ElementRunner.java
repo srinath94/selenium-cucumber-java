@@ -5,8 +5,9 @@ import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-        features = "src/test/resources/Features/ElementsPage.feature",
-        glue={"StepDefinition"}
+        features = "src/test/resources/Features",
+        glue={"StepDefinition","Support"},
+        monochrome = true
 )
 public class ElementRunner {
 
