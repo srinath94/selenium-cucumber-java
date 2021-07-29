@@ -10,9 +10,9 @@ public class PropertiesReader {
 
 
     public void LoadProperties() throws IOException {
-        Properties properties =new Properties();
-        properties.load(new FileInputStream("Config/Config.properties"));
-        page_url= properties.getProperty("URL");
-        browser_type= properties.getProperty("Browser");
+        Properties properties = new Properties();
+        properties.load(new FileInputStream("Config/settings.properties"));
+        page_url = properties.getProperty("URL");
+        browser_type = properties.getProperty("Browser");
     }
 }

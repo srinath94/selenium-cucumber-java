@@ -12,12 +12,18 @@ import org.openqa.selenium.WebDriver;
 public class ElementSteps {
 
     WebDriver driver = new BrowserCreation().getDriver();
+    HomePage homePage = new HomePage(driver);
     ElementsPage elementsPage = new ElementsPage(driver);
-    TextBoxPage textBoxPage =new TextBoxPage(driver);
+    TextBoxPage textBoxPage = new TextBoxPage(driver);
+
+    @Given("I have accessed the ELEMENTS Module from DemoQA Homepage")
+    public void iHaveAccessedTheELEMENTSModuleFromDemoQAHomepage() {
+        homePage.clickOnElements();
+    }
 
     @Given("I click on TextBox option")
     public void i_click_on_text_box_option() {
-         elementsPage.clickOnTextBox();
+        elementsPage.clickOnTextBox();
     }
 
     @When("I enter text in all the available fields")
@@ -27,21 +33,7 @@ public class ElementSteps {
 
     @Then("I should be able to save it by clicking on submit")
     public void i_should_be_able_to_save_it_by_clicking_on_submit() {
-       textBoxPage.clickOnSubmitButton();
+        textBoxPage.clickOnSubmitButton();
     }
 
-    /*@Given("I click on check box option")
-    public void i_click_on_check_box_option() {
-
-    }
-
-    @When("I expend the Home option")
-    public void i_expend_the_home_option() {
-
-    }
-
-    @Then("I should be able to select any of the Notes in the page")
-    public void i_should_be_able_to_select_any_of_the_notes_in_the_page() {
-
-    }*/
 }

@@ -16,17 +16,17 @@ public class TextBoxPage {
     @FindBy(id = "submit")
     private WebElement submitButton;
 
-    public TextBoxPage(WebDriver driver){
-        this.driver=driver;
-        PageFactory.initElements(driver,this);
+    public TextBoxPage(WebDriver driver) {
+        this.driver = driver;
+        PageFactory.initElements(driver, this);
     }
 
-    public void enterTextInFullNameField(String text){
+    public void enterTextInFullNameField(String text) {
         fullNameField.sendKeys(text);
     }
 
-    public void clickOnSubmitButton(){
-        Actions act =  new Actions(driver);
+    public void clickOnSubmitButton() {
+        Actions act = new Actions(driver);
         act.moveToElement(submitButton).click().perform();
     }
 }
