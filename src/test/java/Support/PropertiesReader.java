@@ -11,7 +11,7 @@ public class PropertiesReader {
 
     public void LoadProperties() throws IOException {
         Properties properties = new Properties();
-        properties.load(new FileInputStream("Config/settings.properties"));
+        properties.load(new FileInputStream("src/test/resources/Config/settings.properties"));
         page_url = properties.getProperty("URL");
         browser_type = properties.getProperty("Browser");
     }
