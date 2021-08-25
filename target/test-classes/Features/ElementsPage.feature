@@ -7,3 +7,4 @@ Feature: Elements
     Given I click on TextBox option
     When I enter text in all the available fields
     Then I should be able to save it by clicking on submit
+
